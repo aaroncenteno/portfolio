@@ -5,7 +5,7 @@
   }
   
   :root {
-    --primary-color: #00F3FF;
+    --primary-color: #00f3ff;
     --secondary-color: #3F4647;
     --secondary-opacity: rgb(0, 0, 0, 0.55);
     --tertiary-color: rgb(0, 135, 245);
@@ -153,6 +153,10 @@
   }
   
   /* About Me Styling */
+  #about-me {
+    margin-top: 10vh;
+  }
+
   .headshot {
     height: 20em;
     border: solid var(--primary-color) 5px;
@@ -173,7 +177,7 @@
     margin-top: 40px;
     width: 100%;
     border-color: var(--primary-color);
-    padding: 0 200px 200px 200px;
+    padding: 0 200px 0px 200px;
   }
   
   .section-bio p {
@@ -193,7 +197,7 @@
       width: 95%;
       padding-right: 15px;
       padding-left: 15px;
-
+      margin-top: 10vh;
   }
 
   .stats-card {
@@ -267,9 +271,14 @@
   /* Work Styling */
   
   #works {
-      margin: 20px;
+    margin: 20px;
     position: relative;
     height: auto;
+  }
+
+  #works img {
+    height: 42vh;
+    background-size: cover;
   }
   
   .project-img {
@@ -335,14 +344,31 @@
   /* Portfolio Styling */
   
   .portfolio-container {
-      display: flex;
-      flex-direction: row;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding: 0px 100px 200px 100px;
+    padding: 0px 100px 0px 100px;
+    margin-top: 10vh;
   }
   
   /* Contact Me Styling */
   
+  .contact-area {
+    color: var(--primary-color);
+    text-align: center;
+    background-color: var(--secondary-opacity);
+    width: auto;
+    padding-top: var(--spacing-five);
+    padding-bottom: var(--spacing-five);
+    margin: 0 5vw 10vh 5vw;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+  }
+
+  .contact-area h1 {
+    margin-bottom: 5vh;
+  }
+
   .form-container,
   .resume-section {
     top: 50%;
@@ -458,25 +484,45 @@
   }
   
   /* Footer Styling */
+
   footer {
-    padding: 10px 0;
-    width: 100%;
-    margin-top: var(--spacing-two);
+    color: var(--primary-color);
+    display: flex;
+    text-align: center;
+    justify-content: center;
   }
-  
-  footer ul {
+
+  #contact {
+    margin-top: 10vh;
+  }
+
+  .contact-list {
+    padding: 10px 0;
+    width: 70vw;
+    margin: 10vh 10vw 0 10vw;
+    background-color: rgba(0, 243, 255, .6);
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    text-align: initial;
+  }
+
+  .contact-list ul {
     width: 100%;
+    margin: 0 10vw;
+    text-align: center;
   }
   
   .footer-item {
-    margin-left: 22%;
+    margin-left: 10%;
     display: inline-block;
+    margin-top: var(--spacing-five);
+    margin-bottom: var(--spacing-five);
   }
   
   .footer-link {
-      color:var(--primary-color);
+    color:var(--secondary-color);
     text-decoration: none;
-    font-size: 3em;
+    font-size: 4em;
   }
   
   .footer-link:hover {
@@ -529,7 +575,7 @@
       }
   
       .portfolio-container {
-        padding: 80px 20px;
+        padding: 0px 5vw;
       }
   
       .link-container {
@@ -537,7 +583,6 @@
       }
 
       #skills {
-          margin-left: 0;
           padding-left: 0;
       }
 
@@ -548,7 +593,7 @@
       
       .skills-languages {
           text-align: center;
-          width: 90vw;
+          margin: 10vh 10vw 0 10vw;
       }
 
       .skill-item {
@@ -574,6 +619,19 @@
       #contact-form textarea {
         width: 50vw;
       }
+
+      .contact-list {
+        text-align: initial;
+      }
+
+      .contact-list ul {
+        margin: 0;
+        text-align: center;
+      }
+
+      .footer-item {
+        margin-left: 7%;
+      }
   
       .contact-submit:hover {
         background-image: linear-gradient(145deg,rgba(0, 0, 0, 0.9) 20%, rgba(52, 93, 95, 0.8)40%, rgba(0, 0, 0, 0.9) 75%);
@@ -582,13 +640,16 @@
       .resume-download:hover {
         background-color: var(--primary-color);
       }
-  
+      
+      #works img {
+        height: auto;
+      }
   }
   
   
   @media screen and (max-width: 575px) {
     nav {
-        padding: 0;
+      padding: 0;
     }
 
     nav li a {
@@ -643,8 +704,13 @@
         margin-left: 0;
     }
 
+    .skill-list {
+      justify-content: space-between;
+    }
+
     .skill-item {
-        margin: 1.2em 1.5em 1.2em 1.5em;
+      font-size: .8em;
+      margin: 1.2em 1em 1.2em 1em;
     }
   
     .resume-container {
@@ -659,12 +725,21 @@
     .contact-submit {
       transform: translate(15%, 0%);
     }
+
+    .contact-list {
+      text-align: initial;
+    }
+
+    .contact-list ul {
+      margin: 0 10vw 0 10vw;
+    }
+
+    .contact-list ul li {
+      margin: 5vh 5vw;
+      
+    }
   
     .footer-link {
       font-size: 2.5em;
-    }
-  
-    .footer-item {
-      margin-left: 15%;
     }
   }
